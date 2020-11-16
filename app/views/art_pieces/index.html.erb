@@ -1,11 +1,14 @@
-<h2>Art Pieces</h2>
+<div class="container">
+  <h2>See all Art Pieces available right now!</h2>
 
-<ul>
-  <% @art_pieces.each do |art_piece| %>
-    <li>
-      <%= art_piece.title %>
-      <%= "#{art_piece.price} €" %>
-      <%# photo %>
-    </li>
-    <% end %>
-</ul>
+  <ul>
+    <% @art_pieces.each do |art_piece| %>
+      <li class ="card">
+        <%= art_piece.title %>
+        <%= "#{art_piece.price} €" %>
+        <%= link_to "show details", "#" %>
+        <img src="‪C:\Users\Melwers\Desktop\linh-le-a0rE64YJDA4-unsplash.jpg" alt="vase">
+      </li>
+      <% end %>
+  </ul>
+</div>
