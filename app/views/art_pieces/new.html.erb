@@ -1,0 +1,28 @@
+<div id="background">
+
+  <div id="form-wrapper">
+
+    <div id="form2">
+
+      <div class="container">
+        <div>
+          <h1>Create your new art-piece</h1>
+          <%= simple_form_for(@art_piece) do |f| %>
+            <%= f.input :title %>
+            <%= f.input :description %>
+            <%= f.input :price %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true }, class: "center-field" %>
+            <%= f.submit class: "btn btn-flat btn-block" %>
+          <% end %>
+        </div>
+
+        <div>
+          <%= link_to "Go back to list of art pieces", art_pieces_path, class: "btn btn-flat mt-3 btn-block"  %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render 'navbar' %>
+
+<div class="landing" style="background-image: url(https://images.unsplash.com/photo-1581712075036-2584cb8a3644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1368&q=80);">
+  <div class="container banner-text">
+    <h1>Art Space is your platform to rent <strong>art</strong> and <strong>change your living space!</strong></h1>
+    <p>Explore the world of art</p>
+    <a class="btn btn-flat" href="/art_pieces">Browse the gallery</a>
+  </div>
+</div>
+
+<%= render 'footer' %>

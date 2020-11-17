@@ -1,0 +1,15 @@
+.btn-flat {
+    font-family: $banner-font;
+    font-weight: 200px;
+    color: white;
+    font-size: 23px;
+    padding: 5px;
+    background-color: #252525;
+    transition: background 0.6s ease !important;
+  }
+
+  .btn-flat:hover {
+    opacity: 0.9;
+    background: #252525;
+    color: white;
+  }
