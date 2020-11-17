@@ -1,4 +1,4 @@
-.banner {
+.landing {
   background-size: cover;
   background-position: center;
   padding-top: 150px;
@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-.banner h1 {
+.landing h1 {
   margin: 0;
   color:rgba(0, 0, 0, 0.5);
   font-size: 60px;
@@ -14,7 +14,7 @@
   font-family: $banner-font;
 }
 
-.banner p {
+.landing p {
   font-family: $banner-font;
   font-size: 30px;
   font-weight: lighter;
