@@ -1,0 +1,47 @@
+
+.col-centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.details {
+
+}
+
+.avatar {
+  justify-content: flex-end;
+}
+
+.col-sm-12.col-lg-8.border {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  max-width: 600px;
+  border-radius: 2px;
+}
+
+.row {
+  justify-content: center;
+}
+
+.avatar {
+  position: absolute;
+  right: 60px;
+  top: 80px;
+  border-radius: 50%;
+}
+
+img.avatar-square {
+  border-radius: 50%;
+  border: lightgrey;
+}
+
+.avatar-title {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+}
+
+.piece-description {
+  width: 500px;
+}
