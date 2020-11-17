@@ -23,6 +23,10 @@
 		justify-content: space-between;
 		align-items: flex-end;
 		position: relative;
-	}
+    }
+    &:hover {
+        opacity: 0.6;
+        transition: 0.3s;
+    }
 }
 
