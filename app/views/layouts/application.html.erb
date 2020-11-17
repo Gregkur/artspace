@@ -12,8 +12,53 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>  
+
+ <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/">Home</a>
+            <a class="dropdown-item" href="/user/dashboard">Profile</a>
+            <a class="dropdown-item" href="/art_pieces">Browse art pieces</a>
+            <a class="dropdown-item" href="/art_pieces/new">Offer art pieces</a>
+            <div class="dropdown-divider"></div>
+            <% if user_signed_in? %>
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
+            <% else %>
+              <a class="dropdown-item" href="/users/sign_up">Log in / Register</a>
+            <% end %>
+            <ul class="navbar-nav">
+          </div>
+        </li>
+      </ul>
+    </div>
+      <% if user_signed_in? %>
+        <a class="navbar-brand" href="#"><%= "Welcome to " %> Art space, <%= current_user.first_name.capitalize %></a>
+      <% else %>
+        <a class="navbar-brand" href="/users/sign_up"><%= "Join " %> Art space, <%= "stranger" %></a>
+      <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+</nav>
     <%= yield %>
+
+  <div class="footer navbar fixed-bottom">
+    <div class="footer-links">
+      <a href="https://github.com/Puresturheit/artspace"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This page is made with <i class="fas fa-heart"></i> by Pia, Marike, Lorenz and Greg at Le Wagon
+    </div>
+  </div>
   </body>
 </html>

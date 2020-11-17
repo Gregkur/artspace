@@ -1,0 +1,29 @@
+#background {
+    background-color: #F4F4F4;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center;
+  }
+  #form-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    padding: 135px;
+  }
+  #form1 {
+    width: 40%;
+    display: inline-block;
+    min-width:200px;
+    margin-right: 5em;
+  }
+  #form2 {
+    width: 60%;
+    display: inline-block;
+    min-width:200px;
+    margin-left: 5em;
+  }
+  .login-title{
+      margin-bottom: 1em;
+  }
