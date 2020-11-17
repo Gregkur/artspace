@@ -1,14 +1,22 @@
-<div class="container">
-  <h2>See all Art Pieces available right now!</h2>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80);">
+  <div class="container">
+    <h2>All Art Pieces</h2>
+  </div>
+ </div>
 
-  <ul>
-    <% @art_pieces.each do |art_piece| %>
-      <li class ="card">
-        <%= art_piece.title %>
-        <%= "#{art_piece.price} €" %>
-        <%= link_to "show details", "#" %>
-        <img src="‪C:\Users\Melwers\Desktop\linh-le-a0rE64YJDA4-unsplash.jpg" alt="vase">
-      </li>
-      <% end %>
-  </ul>
+
+<div class="container art-piece-grid">
+  <% @art_pieces.each do |art_piece| %>
+    <div class="card-art-piece">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-art-piece-infos">
+        <div>
+          <h2><%= art_piece.title %></h2>
+          <p>Name of artist here.</p>
+        </div>
+        <h2 class="card-art-piece-pricing"><%= "#{art_piece.price} €" %></h2>
+      </div>
+    </div>
+  <% end %>
 </div>
+
