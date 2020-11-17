@@ -23,7 +23,20 @@
   justify-content: center;
 }
 
-.a {
-  color: black;
+.avatar {
+  position: absolute;
+  right: 60px;
+  top: 80px;
+  border-radius: 50%;
 }
 
+img.avatar-square {
+  border-radius: 50%;
+  border: lightgrey;
+}
+
+.avatar-title {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+}
