@@ -39,24 +39,24 @@
 
     <div class="details-booking-container">
       <div class="row">
-          <div class="col-sm-12 col-lg-8">
-            <h3 class="mt-3">Details:</h3>
-            <ul>
-              <p> Artist: <%= @art_piece.auhor %> </p>
-              <p> Price: <%= @art_piece.price %> € / week </p>
-              <% if @art_piece.availability %>
-                <%= 'currently available' %>
-              <% else %>
-                <%= 'We`re sorry, this piece is currently rented by someone else' %>
-              <% end %>
-              <div class="avatar">
-                <img src="" alt="user_avatar" class="avatar avatar-small">
-              </div>
-            </ul>
-            <div class="booking col-12 col-lg-8">
-              <p> <%= @art_piece.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis atque saepe recusandae possimus reprehenderit doloribus, ratione, quasi eum. Ex voluptatibus fugiat at natus? Vel consequatur dignissimos ea ab porro qui. </p>
+        <div class="col-sm-12 col-lg-8 border">
+          <h3 class="mt-3">Details:</h3>
+          <ul>
+            <p> Artist: <%= @art_piece.author %> </p>
+            <p> Price: <%= @art_piece.price %> € / week </p>
+            <% if @art_piece.availability %>
+              <%= 'currently available' %>
+            <% else %>
+              <%= 'We`re sorry, this piece is currently rented by someone else' %>
+            <% end %>
+            <div class="avatar">
+              <img src="" alt="" class="avatar avatar-small">
             </div>
+          </ul>
+          <div class="booking col-12 col-lg-8">
+            <p> <%= @art_piece.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis atque saepe recusandae possimus reprehenderit doloribus, ratione, quasi eum. Ex voluptatibus fugiat at natus? Vel consequatur dignissimos ea ab porro qui. </p>
           </div>
+        </div>
         <div class="col-12 col-md-8 col-lg-4">
           <div class="border p-4 rounded mt-4">
             <h2>Book this masterpiece</h2>
@@ -80,8 +80,8 @@
       </div>
     </div>
 
-
-  <%= link_to "Back to all art pieces", art_pieces_path %>
-
+    <div class="btn go-back">
+      <%= link_to "Back to all art pieces", art_pieces_path %>
+    </div>
 
 </div>
