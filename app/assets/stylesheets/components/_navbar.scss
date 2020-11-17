@@ -2,6 +2,7 @@
   background-color: transparent !important;
   border-bottom: 1px solid rgba(37, 37, 37, 0.2);
   justify-content: space-between;
+  position: absolute !important;
   .h2 {
     font-family: $banner-font !important;
     font-weight: lighter !important;
@@ -20,4 +21,31 @@
 .navbar-light .navbar-nav .nav-link {
   font-size: 19px;
   color: rgba(0, 0, 0, 0.5);
+}
+.index {
+  .navbar{
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: space-between;
+    position: absolute !important;
+    .h2 {
+      font-family: $banner-font !important;
+      font-weight: lighter !important;
+    }
+  }
+  .footer{
+    .navbar{
+      border-top: black solid 0.5px;
+    }
+  }
+  .navbar-light .navbar-brand {
+    opacity: 0.89;
+    font-family: $banner-font;
+    color: white !important;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 19px;
+    color: white;
+  }
+  
 }
