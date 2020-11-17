@@ -65,3 +65,16 @@
     border-radius: 0px;
   }
   
+  .btn-search {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: #252525;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-search:hover {
+    background: #252525;
+    opacity: 0.9;
+    color: white;
+  }
