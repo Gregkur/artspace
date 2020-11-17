@@ -1,9 +1,14 @@
-.details-booking-container {
+
+.col-centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.details {
 
 }
 
-h1.title-my-3 {
-  text-align: center;
+.avatar {
+  justify-content: flex-end;
 }
-
-
