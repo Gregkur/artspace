@@ -14,18 +14,18 @@
   
   .btn-flat {
     font-family: $banner-font;
-    color: black;
+    font-weight: 200px;
+    color: white;
     font-size: 23px;
     padding: 14px 46px;
-    border-radius: 4px;
-    background: #C4CBCA;
+    background-color: #252525;
     transition: background 0.6s ease !important;
-    opacity: 0.8;
+
   }
   
   .btn-flat:hover {
-    opacity: 1;
-        background: #C4CBCA;
+    opacity: 0.9;
+        background: #252525;
     color: white;
   }
   
