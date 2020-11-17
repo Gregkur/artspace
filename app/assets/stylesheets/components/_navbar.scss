@@ -1,12 +1,23 @@
-.navbar-lewagon {
+.navbar{
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(37, 37, 37, 0.2);
   justify-content: space-between;
-  background: white;
+  .h2 {
+    font-family: $banner-font !important;
+    font-weight: lighter !important;
+  }
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.footer{
+  .navbar{
+    border-top: black solid 0.5px;
+  }
 }
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-light .navbar-brand {
+  opacity: 0.89;
+  font-family: $banner-font;
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.5);
 }
