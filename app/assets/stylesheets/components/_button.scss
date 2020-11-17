@@ -49,3 +49,19 @@
     padding: 10px 35px !important;
     position:absolute; top:15px; right:15px
   }
+  .btn-black{
+    border-color: #252525;
+    color: #FFFFFF;
+    width: 160px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 0px;
+  }
+  
