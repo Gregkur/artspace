@@ -15,6 +15,7 @@
 
 .col-sm-12.col-lg-8.border {
   margin-top: 24px;
+  margin-bottom: 10px;
   max-width: 600px;
   border-radius: 2px;
 }
@@ -39,4 +40,8 @@ img.avatar-square {
   position: absolute;
   top: 80px;
   right: 80px;
+}
+
+.piece-description {
+  width: 500px;
 }
