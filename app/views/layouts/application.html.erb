@@ -21,11 +21,17 @@
             Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/">Home</a>
             <a class="dropdown-item" href="/user/dashboard">Profile</a>
             <a class="dropdown-item" href="/art_pieces">Browse art pieces</a>
             <a class="dropdown-item" href="/art_pieces/new">Offer art pieces</a>
             <div class="dropdown-divider"></div>
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
+            <% if user_signed_in? %>
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "dropdown-item" %>
+            <% else %>
+              <a class="dropdown-item" href="/users/sign_up">Log in / Register</a>
+            <% end %>
+            <ul class="navbar-nav">
           </div>
         </li>
       </ul>

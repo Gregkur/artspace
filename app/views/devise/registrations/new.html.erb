@@ -5,7 +5,7 @@
     <div id="form1" class="my-3">
 
       <div class="login-title">
-        <h2>Log in</h2>
+        <h1><strong>Log in</strong></h1>
       </div>
 
         <div class="container d-flex">
@@ -25,7 +25,7 @@
               </div>
 
               <div class="form-actions">
-                <%= f.button :submit, "Log in" %>
+                <%= f.button :submit, "Log in", class:"btn btn-flat" %>
               </div>
             <% end %>
 
@@ -38,7 +38,7 @@
     <div id="form2"class="my-3">
 
       <div class="login-title">
-        <h2>Sign up</h2>
+        <h1><strong>Sign up</strong></h1>
       </div>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -67,9 +67,8 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Sign up" %>
+            <%= f.button :submit, "Sign up", class:"btn btn-flat" %>
         </div>
-        <%= p params %>
         <% if @user.save %>
          <% sign_in(@user) %>   
           <% end %>
