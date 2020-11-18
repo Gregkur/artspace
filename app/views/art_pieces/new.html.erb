@@ -2,19 +2,19 @@
 
 <div id="background">
   <div class="banner-index" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1524853442417-1fa769747cbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80);">
-    <h1>Create your offer</h1>
+    <h1>Rent your art piece</h1>
   </div>
   <div id="form-wrapper">
     <div class="container">
       <div id="create-form">
         <div id="header-form">
-          <h2>Please insert information about the art piece, you would like to offer 😍</h2>
+          <h2>Please insert information about the art piece you would like to offer</h2>
         </div>
         <%= simple_form_for(@art_piece) do |f| %>
-          <%= f.input :title %>
-          <%= f.input :artist %>
-          <%= f.input :description %>
-          <%= f.input :price %>
+          <%= f.input :title, placeholder: 'Mona Lisa' %>
+          <%= f.input :artist, placeholder: 'Picasso' %>
+          <%= f.input :description, placeholder: 'please take a moment to describe your art piece in a few sentences' %>
+          <%= f.input :price, placeholder: 'price per month' %>
           <%= f.input :photos, as: :file, input_html: { multiple: true }, class: "center-field" %>
           <%= f.submit class: "btn btn-flat-create mt-3" %>
         <% end %>
