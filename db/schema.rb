@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_100041) do
+ActiveRecord::Schema.define(version: 2020_11_18_110247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_100041) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "author"
+    t.string "artist"
     t.index ["user_id"], name: "index_art_pieces_on_user_id"
   end
 
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_11_17_100041) do
     t.bigint "art_piece_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "price"
     t.index ["art_piece_id"], name: "index_bookings_on_art_piece_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -65,6 +66,8 @@ ActiveRecord::Schema.define(version: 2020_11_17_100041) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

@@ -2,12 +2,14 @@ class ArtPiecesController < ApplicationController
   def show
     @art_piece = ArtPiece.find(params[:id])
     @booking = Booking.new
+    @booking_created = false
+    @booking_created = true if params[:booking_created]
   end
 
   def index
     @art_pieces = ArtPiece.all
   end
-  
+
   def new
     @art_piece = ArtPiece.new
   end
@@ -26,7 +28,7 @@ class ArtPiecesController < ApplicationController
   private
 
   def art_piece_params # params for security reasons
-    params.require(:art_piece).permit(:title, :description, :price, photos: []) # add photos: [] if user can upload a photo too
+    params.require(:art_piece).permit(:title, :description, :price, :artist, photos: []) # add photos: [] if user can upload a photo too
   end
   
 end

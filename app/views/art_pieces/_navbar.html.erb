@@ -8,7 +8,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/">Home</a>
-              <a class="dropdown-item" href="/user/dashboard">Profile</a>
+              <%= link_to "Profile", page_path(current_user), :method => :get, class: "dropdown-item" %>
               <a class="dropdown-item" href="/art_pieces">Browse art pieces</a>
               <a class="dropdown-item" href="/art_pieces/new">Offer art pieces</a>
               <div class="dropdown-divider"></div>
@@ -23,7 +23,7 @@
         </ul>
       </div>
         <% if user_signed_in? %>
-          <a class="navbar-brand" href="#"><%= "Welcome to " %> Art space, <%= current_user.first_name.capitalize %></a>
+          <a class="navbar-brand" href="#"><%= "Welcome to " %> Art space, <%= current_user.email.capitalize %></a>
         <% else %>
           <a class="navbar-brand" href="/users/sign_up"><%= "Join " %> Art space, <%= "stranger" %></a>
         <% end %>

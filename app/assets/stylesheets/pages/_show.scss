@@ -1,23 +1,19 @@
-
 .col-centered {
   float: none;
   margin-right: auto;
   margin-left: auto;
 }
 
-.details {
 
-}
-
-.avatar {
-  justify-content: flex-end;
-}
-
-.col-sm-12.col-lg-8.border {
-  margin-top: 24px;
+.details{
+  position: relative;
   margin-bottom: 10px;
   max-width: 600px;
   border-radius: 2px;
+  border: lightgrey;
+  p {
+    width: 500px;
+  }
 }
 
 .row {
@@ -27,8 +23,11 @@
 .avatar {
   position: absolute;
   right: 60px;
-  top: 80px;
+  top: 20px;
   border-radius: 50%;
+  p {
+    width: 100px;
+  }
 }
 
 img.avatar-square {
@@ -42,6 +41,14 @@ img.avatar-square {
   right: 80px;
 }
 
-.piece-description {
-  width: 500px;
+
+.carousel-container {
+  margin-top: 92px;
+  margin-bottom: 36px;
+}
+
+.booking-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 36px;
 }
