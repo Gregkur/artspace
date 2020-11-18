@@ -25,6 +25,7 @@
         </div>
         <h2 class="card-art-piece-pricing"><%= "#{art_piece.price} € | mth" %></h2>
       </div>
+      <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
     </div>
   <% end %>
 </div>
