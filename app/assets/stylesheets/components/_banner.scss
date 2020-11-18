@@ -7,8 +7,8 @@
 }
 
 .landing h1 {
-  margin: 0;
-  color:rgba(0, 0, 0, 0.5);
+  margin-top: -15px;
+  color:rgba(0, 0, 0, 0.8);
   font-size: 60px;
   font-weight: lighter;
   font-family: $banner-font;
@@ -18,10 +18,10 @@
   font-family: $banner-font;
   font-size: 30px;
   font-weight: lighter;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1.0);
   opacity: 0.98;
 }
 .banner-text{
   margin: 0px;
-  padding-left: 70px;
+  padding-left: 60px;
 }
