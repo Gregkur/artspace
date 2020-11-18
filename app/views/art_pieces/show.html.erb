@@ -1,6 +1,4 @@
-<div class="navbar-show">
-  <%= render "navbar-2" %>
-</div>
+
 <div class="container">
 
   <div class="carousel-container">
@@ -47,7 +45,7 @@
           <% end %>
           <div class="avatar">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
-            <%= "Offered by #{@art_piece.user.first_name}" %>
+            <%= "Offered by #{@art_piece.user.email}" %>
           </div>
         </ul>
         <div class="booking col-12 col-lg-8">
@@ -56,22 +54,12 @@
       </div>
       <div class="col-12 col-md-8 col-lg-4">
         <div class="border p-4 rounded mt-4">
-          <h2>Book this masterpiece</h2>
-          <form action="/">
-            <div class="form-group">
-              <label for="message">Your message</label>
-              <input type="text" placeholder="Your message" id="message" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="arrival">From</label>
-              <input type="date" id="arrival" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="departure">Until</label>
-              <input type="date" id="departure" class="form-control">
-            </div>
-            <input type="submit" value="Book now" class="btn form-control" id="btn-submit">
-          </form>
+          <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
+          <%= simple_form_for [@art_piece, @booking] do |f| %>
+            <%= f.input :check_in %>
+            <%= f.input :check_out %>
+            <%= f.submit "create", class: "btn btn-primary" %>
+         <% end %>
         </div>
       </div>
     </div>

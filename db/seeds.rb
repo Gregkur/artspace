@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "loading seed"
+
+User.create(email: "pia@pia.com", password: "testing")
 5.times do
     ArtPiece.create!(title: 'Golden Vase', description: 'Old Vase with golden details.', price: '100', availability: true, user: User.first)
     ArtPiece.create!(title: 'Black Vase', description: 'Old Vase with black details.', price: '150', availability: true, user: User.first)
