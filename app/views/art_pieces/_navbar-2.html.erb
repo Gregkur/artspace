@@ -22,7 +22,7 @@
       </ul>
     </div>
       <% if user_signed_in? %>
-        <a class="navbar-brand" href="#"><%= "Welcome to " %> Art space, <%= current_user.first_name.capitalize %></a>
+        <a class="navbar-brand" href="#"><%= "Welcome to " %> Art space, <%= current_user.email.capitalize %></a>
       <% else %>
         <a class="navbar-brand" href="/users/sign_up"><%= "Join " %> Art space, <%= "stranger" %></a>
       <% end %>
