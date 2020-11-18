@@ -11,8 +11,8 @@
 
 .avatar {
   position: absolute;
-  right: 60px;
-  top: 20px;
+  right: 80px;
+  top: 25px;
   border-radius: 50%;
   p {
     width: 100px;
@@ -36,7 +36,10 @@ img.avatar-square {
   margin-bottom: 36px;
 }
 
-
+.avatar-square {
+  width: 80px;
+  margin: -10px;
+}
 
 
 

@@ -36,7 +36,7 @@
         <div class="border p-4 rounded">
           <h2 class="mt-1.5"> Details:</h2>
           <div class="mt-4">
-            <p> <%= @art_piece.artist %> </p>
+            <p> Artist: <%= @art_piece.artist %> </p>
             <p> Price: <%= @art_piece.price %> € / week </p>
             <p> Status:
               <% if @art_piece.availability %>
@@ -59,11 +59,13 @@
       <div class="booking col-12 col-lg-12">
         <div class="border p-4 rounded">
           <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
-          <%= simple_form_for [@art_piece, @booking] do |f| %>
-            <%= f.input :check_in %>
-            <%= f.input :check_out %>
-            <%= f.submit "Book masterpiece", class: "btn btn-flat-create" %>
-          <% end %>
+          <div>
+            <%= simple_form_for [@art_piece, @booking] do |f| %>
+              <%= f.input :check_in %>
+              <%= f.input :check_out %>
+              <%= f.submit "Book masterpiece", class: "btn btn-flat-create" %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
