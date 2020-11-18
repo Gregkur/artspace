@@ -9,6 +9,7 @@
           <h1><strong>Create your art-piece offer</strong></h1>
           <%= simple_form_for(@art_piece) do |f| %>
             <%= f.input :title %>
+            <%= f.input :artist %>
             <%= f.input :description %>
             <%= f.input :price %>
             <%= f.input :photos, as: :file, input_html: { multiple: true }, class: "center-field" %>
