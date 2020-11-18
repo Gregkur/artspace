@@ -2,18 +2,7 @@
   float: none;
   margin-right: auto;
   margin-left: auto;
-}
-
-
-.details{
-  position: relative;
-  margin-bottom: 10px;
-  max-width: 600px;
-  border-radius: 2px;
-  border: lightgrey;
-  p {
-    width: 500px;
-  }
+  background-size: cover;
 }
 
 .row {
@@ -47,8 +36,11 @@ img.avatar-square {
   margin-bottom: 36px;
 }
 
-.booking-flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 36px;
-}
+
+
+
+
+
+
+
+

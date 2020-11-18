@@ -4,17 +4,17 @@
   <div class="carousel-container">
     <h1 class="mt-3 text-center"><%= @art_piece.title %></h1>
     <div class="row">
-      <div class="col-12 col-lg-8 col-centered">
+      <div class="col-12 col-centered">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item">
-              <img src="https://picsum.photos/600/350" class="d-block w-100 mt-4 rounded" alt="...">
+              <img src="https://picsum.photos/800/350" class="d-block w-100 mt-4 rounded" alt="...">
             </div>
             <div class="carousel-item active">
-              <img src="https://picsum.photos/600/350" class="d-block w-100 mt-4 rounded" alt="...">
+              <img src="https://picsum.photos/800/350" class="d-block w-100 mt-4 rounded" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="https://picsum.photos/600/350" class="d-block w-100 mt-4 rounded" alt="...">
+              <img src="https://picsum.photos/800/350" class="d-block w-100 mt-4 rounded" alt="...">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -30,37 +30,45 @@
     </div>
   </div>
 
-  <div class="booking-flex">
-    <div class="details">
-      <div class="border p-4 rounded">
-        <h3 class="mt-3">Details:</h3>
-        <ul>
-          <p> Artist: <%= @art_piece.artist %> </p>
-          <p> Price: <%= @art_piece.price %> € / week </p>
-          <% if @art_piece.availability %>
-            <%= 'currently available' %>
-          <% else %>
-            <%= 'We`re sorry, this piece is currently rented by someone else' %>
-          <% end %>
-        </ul>
-        <p> <%= @art_piece.description %> </p>
-        <div class="avatar">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
-          <p> <%= "#{@art_piece.user.email}" %> </p>
+  <div class="booking-flex mb-4">
+    <div class="row">
+      <div class="details col-12 col-lg-12 mb-4">
+        <div class="border p-4 rounded">
+          <h2 class="mt-1.5"> Details:</h2>
+          <div class="mt-4">
+            <p> <%= @art_piece.artist %> </p>
+            <p> Price: <%= @art_piece.price %> € / week </p>
+            <p> Status:
+              <% if @art_piece.availability %>
+                <%= 'currently available' %>
+              <% else %>
+                <%= 'We`re sorry, this piece is currently rented by someone else' %>
+              <% end %>
+            </p>
+            <p> Description: <%= @art_piece.description %> </p>
+            <p> User: <%= "#{@art_piece.user.email}" %> </p>
+          </div>
+          <div class="avatar">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
+          </div>
         </div>
       </div>
     </div>
-    <div class="booking">
-      <div class="border p-4 rounded">
-        <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
-        <%= simple_form_for [@art_piece, @booking] do |f| %>
-          <%= f.input :check_in %>
-          <%= f.input :check_out %>
-          <%= f.submit "create", class: "btn btn-flat" %>
-       <% end %>
+
+    <div class="row">
+      <div class="booking col-12 col-lg-12">
+        <div class="border p-4 rounded">
+          <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
+          <%= simple_form_for [@art_piece, @booking] do |f| %>
+            <%= f.input :check_in %>
+            <%= f.input :check_out %>
+            <%= f.submit "Book masterpiece", class: "btn btn-flat-create" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <%= render "footer" %>

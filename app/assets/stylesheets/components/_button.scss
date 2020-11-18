@@ -23,6 +23,12 @@
 
   }
 
+  .btn-flat:hover {
+    opacity: 0.9;
+        background: #252525;
+    color: white;
+  }
+
   .btn-flat-create {
     font-family: $banner-font;
     font-weight: 200px;
@@ -33,9 +39,9 @@
     transition: background 0.6s ease !important;
   }
 
-  .btn-flat:hover {
+  .btn-flat-create:hover {
     opacity: 0.9;
-        background: #252525;
+    background: #252525;
     color: white;
   }
 
