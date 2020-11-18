@@ -15,6 +15,8 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+// const imagePath = (name) => images(name, true)
+
 
 
 // ----------------------------------------------------
@@ -25,6 +27,11 @@ require("channels")
 // External imports
 import "bootstrap";
 
+import Swal from 'sweetalert2'
+import 'sweetalert2/src/sweetalert2.scss'
+
+
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,4 +39,12 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  if (document.querySelector("#hello")) {
+    Swal.fire({
+      title: "Congratulations",
+      text: 'Your booking has been created!',
+      icon: 'success',
+      confirmButtonText: 'Cool'
+    })
+  };
 });

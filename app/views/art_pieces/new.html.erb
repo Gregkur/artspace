@@ -24,6 +24,13 @@
 </div>
 <%= render 'footer' %>
 
+<% if alert %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+  </div>
+<% end %>
+
 
  <!-- <div>
         <%= link_to "Go back to list of art pieces", art_pieces_path, class: "btn btn-flat-create mt-3"  %>
