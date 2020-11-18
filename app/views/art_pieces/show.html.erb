@@ -1,4 +1,4 @@
-
+<%= render 'navbar-2' %>
 <div class="container">
 
   <div class="carousel-container">
@@ -30,10 +30,9 @@
     </div>
   </div>
 
-
-  <div class="details-booking-container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-8 border">
+  <div class="booking-flex">
+    <div class="details">
+      <div class="border p-4 rounded">
         <h3 class="mt-3">Details:</h3>
         <ul>
           <p> Artist: <%= @art_piece.author %> </p>
@@ -43,27 +42,25 @@
           <% else %>
             <%= 'We`re sorry, this piece is currently rented by someone else' %>
           <% end %>
-          <div class="avatar">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
-            <%= "Offered by #{@art_piece.user.email}" %>
-          </div>
         </ul>
-        <div class="booking col-12 col-lg-8">
-          <p class="piece-description"> <%= @art_piece.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis atque saepe recusandae possimus reprehenderit doloribus, ratione, quasi eum. Ex voluptatibus fugiat at natus? Vel consequatur dignissimos ea ab porro qui. </p>
-        </div>
-      </div>
-      <div class="col-12 col-md-8 col-lg-4">
-        <div class="border p-4 rounded mt-4">
-          <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
-          <%= simple_form_for [@art_piece, @booking] do |f| %>
-            <%= f.input :check_in %>
-            <%= f.input :check_out %>
-            <%= f.submit "create", class: "btn btn-primary" %>
-         <% end %>
+        <p> <%= @art_piece.description %> </p>
+        <div class="avatar">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
+          <p> <%= "#{@art_piece.user.email}" %> </p>
         </div>
       </div>
     </div>
+    <div class="booking">
+      <div class="border p-4 rounded">
+        <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
+        <%= simple_form_for [@art_piece, @booking] do |f| %>
+          <%= f.input :check_in %>
+          <%= f.input :check_out %>
+          <%= f.submit "create", class: "btn btn-flat" %>
+       <% end %>
+      </div>
+    </div>
   </div>
-
 </div>
+
 <%= render "footer" %>
