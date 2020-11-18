@@ -1,12 +1,8 @@
 .card-art-piece {
 	overflow: hidden;
     background: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-	>img {
-		height: 150px;
-		width: 100%;
-		object-fit: cover;
-	}
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	position: relative;
 	h2 {
 		font-size: 12px;
 		font-weight: bold;
@@ -30,3 +26,16 @@
     }
 }
 
+.card-link {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+    left: 0;
+}
+
+.img-index {
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+}
