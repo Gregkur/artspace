@@ -15,7 +15,9 @@
           <%= f.input :artist, placeholder: 'Picasso' %>
           <%= f.input :description, placeholder: 'please take a moment to describe your art piece in a few sentences' %>
           <%= f.input :price, placeholder: 'price per month' %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true }, class: "center-field" %>
+          <div class="container d-flex justify-content-center">
+            <%= f.input :photos, as: :file, input_html: { multiple: true }, hint: 'please upload high-resolution pictures' %>
+          </div>
           <%= f.submit class: "btn btn-flat-create mt-3" %>
         <% end %>
       </div>
