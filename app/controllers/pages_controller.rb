@@ -4,7 +4,9 @@ class PagesController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
+    @booking = Booking.new
+    @booking.user = @user
   end
   
 end
