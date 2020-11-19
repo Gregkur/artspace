@@ -19,17 +19,17 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-      </div>
-      <div class="card-art-piece-infos">
-        <div>
-        <h2><%= art_piece.title %></h2>
-        <p><%= art_piece.artist %>.</p>
-          <div class="functional-buttons">
-            <h2><%= link_to 'Delete', art_piece, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
-            <h2><%= link_to 'Edit', art_piece, {:class => 'tooltips', 'data-toggle' => 'modal', 'data-target' => '#exampleModal'+art_piece.id.to_s}%></h2>
         </div>
-      </div>
-        <h2 class="card-art-piece-pricing"><%= "#{art_piece.price} € | mth" %></h2>
+        <div class="card-art-piece-infos">
+          <div>
+          <h2><%= art_piece.title %></h2>
+          <p><%= art_piece.artist %>.</p>
+            <div class="functional-buttons">
+              <h2><%= link_to 'Delete', art_piece, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
+              <h2><%= link_to 'Edit', art_piece, {:class => 'tooltips', 'data-toggle' => 'modal', 'data-target' => '#exampleModal'+art_piece.id.to_s}%></h2>
+            </div>
+          </div>
+          <h2 class="card-art-piece-pricing"><%= "#{art_piece.price} € | mth" %></h2>
         </div>
           <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
       </div>
