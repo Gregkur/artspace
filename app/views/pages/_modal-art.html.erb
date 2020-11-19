@@ -8,31 +8,37 @@
             <% art_piece.photos.each_with_index do |photo, i| %>
               <div class="carousel-item <%= "active" if i.zero? %>">
                 <%= cl_image_tag photo.key, crop: :fill, class:"img-index" %>
-              </div>
-            <% end %>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+            <% end %>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
         <div class="card-art-piece-infos">
           <div>
-          <h2><%= art_piece.title %></h2>
-          <p><%= art_piece.artist %>.</p>
+            <h2><%= art_piece.title %></h2>
+            <p><%= art_piece.artist %>.</p>
             <div class="functional-buttons">
-              <h2><%= link_to 'Delete', art_piece, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
-              <h2><%= link_to 'Edit', art_piece, {:class => 'tooltips', 'data-toggle' => 'modal', 'data-target' => '#exampleModal'+art_piece.id.to_s}%></h2>
+              <h2>
+                <%= link_to 'Delete', art_piece, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </h2>
+              <h2>
+                <%= link_to 'Edit', art_piece, {:class => 'tooltips', 'data-toggle' => 'modal', 'data-target' => '#exampleModal'+art_piece.id.to_s}%>
+              </h2>
             </div>
           </div>
-          <h2 class="card-art-piece-pricing"><%= "#{art_piece.price} € | mth" %></h2>
+          <h2 class="card-art-piece-pricing">
+            <%= "#{art_piece.price} € | mth" %>
+          </h2>
         </div>
-          <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
-      </div>
+      <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
+    </div>
       <div class="modal fade" id="exampleModal<%=art_piece.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -54,7 +60,7 @@
                 </div>
                 <div class="modal-footer">
                 <div class="form-actions">
-                  <%= f.button :submit, class: "btn btn-flat" %>
+                  <%= f.button :submit, class: "btn btn-flat-create" %>
                 </div>
                 </div>
               <% end %>
