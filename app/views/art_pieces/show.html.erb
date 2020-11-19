@@ -46,7 +46,7 @@
               <% end %>
             </p>
             <p> Description: <%= @art_piece.description %> </p>
-            <p> User: <%= "#{@art_piece.user.email}" %> </p>
+            <p> Offered by: <%= "#{@art_piece.user.first_name}" %> </p>
           </div>
           <div class="avatar">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/krokrob", class: "avatar-square", alt: "avatar-square" %>
