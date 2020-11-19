@@ -12,16 +12,13 @@ class ArtPiecesController < ApplicationController
 
   def new
     @art_piece = ArtPiece.new
-    @art_piece_created = false
-    @art_piece_created = true if params[:art_piece_created]
   end
 
   def create
     @art_piece = ArtPiece.new(art_piece_params)
     @art_piece.user = current_user
-    # raise
     if @art_piece.save
-      redirect_to art_piece_path(@art_piece, art_piece_created: true) # redirects to the show page
+      redirect_to art_piece_path(@art_piece), notice: "Congratulations, your art piece has been added!" # redirects to the show page
     else
       @art_piece_created = false
       render :new
