@@ -1,0 +1,49 @@
+#banner-info {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 260px 0;
+    margin: 0 0 36px 0;
+
+    h2 {
+        margin: 0;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        font-size: 32px;
+        font-weight: bold;
+        padding: 20p;
+        margin: 20p;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 10;
+        width: 90%;
+        letter-spacing: 2px;
+    }
+
+  h1 {
+        margin: 0;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        font-size: 50px;
+        font-weight: bold;
+        padding: 20p;
+        margin: 20p;
+        position: absolute;
+        transform: translate(-50%, 0%);
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 10;
+        width: 90%;
+        letter-spacing: 2px;
+  }
+  }
