@@ -8,10 +8,23 @@ class ArtPiecesController < ApplicationController
 
   def index
     @art_pieces = ArtPiece.all
+    @art_pieces = ArtPiece.search(params[:query]) if params[:query].present?
   end
 
   def new
     @art_piece = ArtPiece.new
+  end
+  
+  def destroy
+    @art_piece = ArtPiece.find(params[:id])
+    @art_piece.destroy
+    redirect_to page_path(current_user)
+  end
+  
+  def update
+    @art_piece = ArtPiece.find(params[:id])
+    @art_piece.update(art_piece_params)
+    redirect_to page_path(current_user)
   end
 
   def create
@@ -23,6 +36,8 @@ class ArtPiecesController < ApplicationController
       @art_piece_created = false
       render :new
     end
+
+
   end
 
   private

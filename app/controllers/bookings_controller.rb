@@ -15,6 +15,21 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @art_piece = ArtPiece.find(params[:id])
+    @booking.art_piece = @art_piece
+    @booking.destroy
+    redirect_to page_path(current_user)
+  end
+
+  def show
+    @user = current_user
+    @booking = Booking.find(params[:id])
+    @booking.user = current_user
+  end
+  
+
   private
 
   def calculate_price

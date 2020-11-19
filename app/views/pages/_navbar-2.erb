@@ -4,7 +4,7 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=>
-              More
+              Menu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="/">Home</a>
@@ -23,7 +23,7 @@
         </ul>
       </div>
         <% if user_signed_in? %>
-          <a class="navbar-brand" href="#">Welcome to <b>Art space</b></a>
+          <a class="navbar-brand" href="#"><%= "Welcome to " %> Art space, <%= current_user.email.capitalize %></a>
         <% else %>
           <a class="navbar-brand" href="/users/sign_up"><%= "Join " %> Art space, <%= "stranger" %></a>
         <% end %>

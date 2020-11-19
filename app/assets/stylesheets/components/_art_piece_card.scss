@@ -3,6 +3,11 @@
     background: white;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	position: relative;
+
+	a{
+		color: black !important;
+		text-decoration: none !important;
+	}
 	h2 {
 		font-size: 12px;
 		font-weight: bold;
@@ -38,4 +43,11 @@
 	height: 150px;
 	width: 100%;
 	object-fit: cover;
+}
+
+.img-show {
+  height: 800px;
+  width: 100%;
+  object-fit: cover;
+
 }
