@@ -19,7 +19,7 @@
 		margin: 0;
 	}
 	.card-art-piece-infos {
-		padding: 16px;
+		padding: 25px;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
@@ -27,7 +27,7 @@
     }
     &:hover {
         opacity: 0.8;
-		transition: 0.3s;	
+		transition: 0.3s;
     }
 }
 

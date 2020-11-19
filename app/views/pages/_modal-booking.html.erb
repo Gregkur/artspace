@@ -1,4 +1,4 @@
-<div class="container d-flex  justify-content-center my-4">
+<div class="container d-flex justify-content-center my-4">
   <div class="container">
     <div class="container art-piece-grid">
       <% @user.bookings.each do |booking| %>
@@ -25,12 +25,14 @@
             <h2><%= booking.art_piece.title %></h2>
             <p><%= booking.art_piece.artist %>.</p>
               <div class="functional-buttons">
-                <h2><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
+                <%= link_to booking, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-trash mr-2 mt-2"></i>
+              <% end %>
               </div>
-          <%= link_to "", art_piece_path, class: "card-link img-index" %>
+          <%#= link_to "", art_piece_path, class: "card-link img-index" %>
           </div>
           <h2 class="card-art-piece-pricing">
-            %= "#{booking.art_piece.price} € | mth" %>
+            <%= "#{booking.art_piece.price} € | mth" %>
           </h2>
         </div>
       </div>
