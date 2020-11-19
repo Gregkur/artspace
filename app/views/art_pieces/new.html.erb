@@ -8,7 +8,7 @@
     <div class="container">
       <div id="create-form">
         <div id="header-form">
-          <h2>Please insert information about the art piece you would like to offer</h2>
+          <h2 id="<%= @art_piece_created ? 'done' : nil %>" >Please insert information about the art piece you would like to offer</h2>
         </div>
         <%= simple_form_for(@art_piece) do |f| %>
           <%= f.input :title, placeholder: 'Mona Lisa' %>

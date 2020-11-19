@@ -44,7 +44,29 @@ document.addEventListener('turbolinks:load', () => {
       title: "Congratulations",
       text: 'Your booking has been created!',
       icon: 'success',
-      confirmButtonText: 'Cool'
+      showDenyButton: true,
+      confirmButtonText: `Back to artpiece`,
+      denyButtonText: `Go to bookings`,
+      confirmButtonColor: '#252525',
+      denyButtonColor: '#252525',
+    }).then(result => {
+      if (result.isConfirmed) {
+        const link1 = document.querySelector('#artpiece-link');
+        link1.click();
+      } else {
+        const link2 = document.querySelector('#bookings-link');
+        link2.click();
+      }
+
+    })
+  };
+  if (document.querySelector("#done")) {
+    Swal.fire({
+      title: "Done!",
+      text: 'Your art piece has been added!',
+      icon: 'success',
+      confirmButtonText: 'Cool',
+      confirmButtonColor: '#252525',
     })
   };
 });

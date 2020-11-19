@@ -65,6 +65,8 @@
               <%= f.input :check_out %>
               <%= f.submit "Book masterpiece", class: "btn btn-flat-create" %>
             <% end %>
+            <%= link_to "", art_piece_path(@art_piece), method: :get, id: "artpiece-link", class: "hidden" %>
+            <%= link_to "", art_pieces_path, method: :get, id: "bookings-link", class: "hidden" %>
           </div>
         </div>
       </div>
