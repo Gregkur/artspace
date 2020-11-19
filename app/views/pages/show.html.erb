@@ -28,6 +28,9 @@
             <div>
               <h2><%= art_piece.title %></h2>
               <p><%= art_piece.artist %>.</p>
+              <button data-toggle="modal" data-target="#exampleModal">
+                Edit
+              </button>
               <h2><%= link_to 'Delete', art_piece, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
             </div>
 
@@ -36,6 +39,38 @@
           </div>
           <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
           </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editing <%= art_piece.title %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <%= simple_form_for(art_piece) do |f| %>
+                  <%= f.error_notification %>
+                  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+                  <div class="form-inputs">
+                    <%= f.input :title %>
+                    <%= f.input :artist %>
+                    <%= f.input :price %>
+                    <%= f.input :description %>
+                  </div>
+
+                  <div class="modal-footer">
+                  <div class="form-actions">
+                    <%= f.button :submit, class: "btn btn-flat" %>
+                  </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <% end %>
         
@@ -50,5 +85,6 @@
     <div class="container d-flex  justify-content-center my-4">
 
     </div>
+    
 
 <%= render 'footer' %>

@@ -19,7 +19,7 @@ class ArtPiecesController < ApplicationController
     @art_piece.destroy
     redirect_to page_path(current_user)
   end
-  
+
   def create
     @art_piece = ArtPiece.new(art_piece_params)
     @art_piece.user = current_user
@@ -30,6 +30,9 @@ class ArtPiecesController < ApplicationController
       render :new
     end
 
+    def update
+      
+    end
 
   end
 
