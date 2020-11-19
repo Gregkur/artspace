@@ -1,4 +1,7 @@
 <%= render 'navbar-2' %>
+<% if flash[:notice] %>
+    <div class="alert alert-success"><%= flash[:notice] %></div>
+  <% end %>
 <div class="carousel-container">
 
   <h1 class="mb-4 text-center"><%= @art_piece.title %></h1>
@@ -33,7 +36,7 @@
             <p><strong>Price: </strong><%= @art_piece.price %> € | week </p>
             <p><strong>Status: </strong>
               <% if @art_piece.availability %>
-                <%= 'currently available ' %> 
+                <%= 'currently available ' %>
                 <i class="fas fa-check" id="available"></i>
               <% else %>
                 <%= 'We`re sorry, this piece is currently rented by someone else. ' %>
@@ -44,7 +47,7 @@
             <p class="description">
               <strong>Description: </strong>
               <br>
-              <%= @art_piece.description %> 
+              <%= @art_piece.description %>
             </p>
           </div>
           <div class="avatar">
@@ -72,6 +75,5 @@
     </div>
   </div>
 </div>
-
 
 <%= render "footer" %>

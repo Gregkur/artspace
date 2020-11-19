@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.art_piece = @art_piece
     if @booking.save
+      flash[:notice] = "Your artpiece has been added!"
       redirect_to art_piece_path(@art_piece, booking_created: true)
     else
       @booking_created = false
@@ -28,7 +29,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.user = current_user
   end
-  
+
 
   private
 
