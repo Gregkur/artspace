@@ -1,6 +1,6 @@
 class ArtPiece < ApplicationRecord
   belongs_to :user
-  has_many_attached :photos
+  has_many_attached :photos, dependent: :delete_all
 
   validates :title, presence: true, length: { minimum: 2 }
   validates :description, presence: true, length: { minimum: 5, too_short: "minimum is %{count} characters" }
