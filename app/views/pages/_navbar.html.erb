@@ -7,7 +7,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/">Home</a>
-            <%= link_to "Profile", page_path(current_user), :method => :get, class: "dropdown-item" %>
+            <% if user_signed_in? %>
+              <%= link_to "Profile", page_path(current_user), :method => :get, class: "dropdown-item" %>
+            <% end %>
             <a class="dropdown-item" href="/art_pieces">Browse art pieces</a>
             <a class="dropdown-item" href="/art_pieces/new">Offer art pieces</a>
             <div class="dropdown-divider"></div>

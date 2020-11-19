@@ -27,6 +27,7 @@
               <div class="functional-buttons">
                 <h2><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
               </div>
+          <%= link_to "", art_piece_path, class: "card-link img-index" %>
           </div>
           <h2 class="card-art-piece-pricing">
             %= "#{booking.art_piece.price} € | mth" %>

@@ -30,10 +30,8 @@ img.avatar-square {
   right: 80px;
 }
 
-
 .carousel-container {
-  margin-top: 92px;
-  margin-bottom: 36px;
+  margin: 120px 136px 64px 136px;
 }
 
 .avatar-square {
@@ -41,8 +39,31 @@ img.avatar-square {
   margin: -10px;
 }
 
+.img-show {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
+.card-show {
+  background-color: whitesmoke;
+  padding: 32px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
+.description {
+  width: 85%;
+  text-align: justify;
+}
+
+#available {
+  color: #9ad3bc;
+}
+
+#unavailable {
+  color: #ec524b;
+}
 
 
 

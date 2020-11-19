@@ -26,8 +26,8 @@
 		position: relative;
     }
     &:hover {
-        opacity: 0.6;
-        transition: 0.3s;
+        opacity: 0.8;
+		transition: 0.3s;	
     }
 }
 
@@ -49,7 +49,6 @@
   height: 800px;
   width: 100%;
   object-fit: cover;
-
 }
 
 .fa-trash {
