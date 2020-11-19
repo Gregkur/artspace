@@ -13,7 +13,13 @@ class ArtPiecesController < ApplicationController
   def new
     @art_piece = ArtPiece.new
   end
-
+  
+  def destroy
+    @art_piece = ArtPiece.find(params[:id])
+    @art_piece.destroy
+    redirect_to page_path(current_user)
+  end
+  
   def create
     @art_piece = ArtPiece.new(art_piece_params)
     @art_piece.user = current_user
@@ -23,6 +29,8 @@ class ArtPiecesController < ApplicationController
     else
       render :new
     end
+
+
   end
 
   private

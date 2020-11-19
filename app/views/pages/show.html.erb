@@ -24,9 +24,11 @@
           <% end %>
 
           <div class="card-art-piece-infos">
+          
             <div>
               <h2><%= art_piece.title %></h2>
               <p><%= art_piece.artist %>.</p>
+              <h2><%= link_to 'Delete', art_piece, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
             </div>
 
             <h2 class="card-art-piece-pricing"><%= "#{art_piece.price} € | mth" %></h2>
