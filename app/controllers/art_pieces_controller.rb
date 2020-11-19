@@ -8,6 +8,7 @@ class ArtPiecesController < ApplicationController
 
   def index
     @art_pieces = ArtPiece.all
+    @art_pieces = ArtPiece.search(params[:query]) if params[:query].present?
   end
 
   def new

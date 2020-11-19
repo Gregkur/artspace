@@ -9,7 +9,7 @@ class ArtPiece < ApplicationRecord
   validates :artist, presence: true
 
   include PgSearch::Model
-  pg_search_scope :search_by_title_and_description_and_artist,
+  pg_search_scope :search,
     against: [ :title, :description, :artist ],
     using: {
       tsearch: { prefix: true }
