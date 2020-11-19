@@ -2,18 +2,7 @@
   float: none;
   margin-right: auto;
   margin-left: auto;
-}
-
-
-.details{
-  position: relative;
-  margin-bottom: 10px;
-  max-width: 600px;
-  border-radius: 2px;
-  border: lightgrey;
-  p {
-    width: 500px;
-  }
+  background-size: cover;
 }
 
 .row {
@@ -22,8 +11,8 @@
 
 .avatar {
   position: absolute;
-  right: 60px;
-  top: 20px;
+  right: 80px;
+  top: 25px;
   border-radius: 50%;
   p {
     width: 100px;
@@ -47,8 +36,14 @@ img.avatar-square {
   margin-bottom: 36px;
 }
 
-.booking-flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 36px;
+.avatar-square {
+  width: 80px;
+  margin: -10px;
 }
+
+
+
+
+
+
+
