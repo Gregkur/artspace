@@ -58,13 +58,15 @@
     <div class="row">
       <div class="booking col-12 col-lg-12">
         <div class="card-show border rounded">
-          <h2 id="<%= @booking_created ? 'hello' : nil %>">Book this masterpiece</h2>
+          <h2 id="<%= @booking_created ? 'booking' : nil %>">Book this masterpiece</h2>
           <div>
             <%= simple_form_for [@art_piece, @booking] do |f| %>
               <%= f.input :check_in %>
               <%= f.input :check_out %>
               <%= f.submit "Book masterpiece", class: "btn btn-flat-create" %>
             <% end %>
+            <%= link_to "", art_piece_path(@art_piece), method: :get, id: "artpiece-link", class: "hidden" %>
+            <%= link_to "", page_path(current_user), method: :get, id: "bookings-link", class: "hidden" %>
           </div>
         </div>
       </div>

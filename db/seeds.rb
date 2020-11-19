@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 puts "loading users"
   user1 = User.create!(first_name: 'Alan', last_name: 'Johnson', email: 'alanj@gmail.com', password: '123456')
   user2 = User.create!(first_name: 'Andrew', last_name: 'Meyer', email: 'andrewm@gmail.com', password: '123456')
@@ -22,5 +21,4 @@ puts "loading art pieces"
   ArtPiece.create!(title: 'Cat Abstract', artist: 'Melina Black', description: 'This original luxury, bespoke artwork shows a cute ginger kitten, who is just stirring from sleep. I have created the art using the thick paints. I use high quality acrylic paints in my usual uplifting and joyful colours. My pallet knives create the artwork aswell as disciplined splashing and painting effects.', price: 82, availability: true, user: user3)
   ArtPiece.create!(title: 'Impressionist Moon', artist: 'Corinna Milan', description: 'An original, one off acrylic painting of bees under a misty moon. Quite a surreal piece, I have named this Night Shift as the bees are still at work gathering pollen. Look closely and you will see there are three of them buzzing away.', price: 46, availability: true, user: user4)
 
-end 
 puts "created art pieces"

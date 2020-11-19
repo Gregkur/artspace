@@ -1,4 +1,4 @@
-<%= render 'navbar' %>
+<%#= render 'navbar' %>
 <div id="background">
 
   <div id="form-wrapper">
@@ -35,7 +35,7 @@
         </div>
 
     </div>
-    
+
     <div id="form2"class="my-3">
 
       <div class="login-title">
@@ -71,7 +71,7 @@
             <%= f.button :submit, "Sign up", class:"btn btn-flat" %>
         </div>
         <% if @user.save %>
-         <% sign_in(@user) %>   
+         <% sign_in(@user) %>
           <% end %>
 
       <% end %>
