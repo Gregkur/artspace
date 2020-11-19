@@ -8,6 +8,7 @@
             <% art_piece.photos.each_with_index do |photo, i| %>
               <div class="carousel-item <%= "active" if i.zero? %>">
                 <%= cl_image_tag photo.key, crop: :fill, class:"img-index" %>
+                <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
           </div>
             <% end %>
         </div>
@@ -38,7 +39,6 @@
             <%= "#{art_piece.price} € | mth" %>
           </h2>
         </div>
-      <%#= link_to "", art_piece_path(art_piece), class: "card-link" %>
     </div>
       <div class="modal fade" id="exampleModal<%=art_piece.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
