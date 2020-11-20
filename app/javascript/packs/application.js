@@ -60,13 +60,4 @@ document.addEventListener('turbolinks:load', () => {
 
     })
   };
-  if (document.querySelector("#done")) {
-    Swal.fire({
-      title: "Done!",
-      text: 'Your art piece has been added!',
-      icon: 'success',
-      confirmButtonText: 'Cool',
-      confirmButtonColor: '#252525',
-    })
-  };
 });
