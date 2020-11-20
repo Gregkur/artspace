@@ -35,6 +35,7 @@
             <p><strong>Artist: </strong><%= @art_piece.artist %> </p>
             <p><strong>Price: </strong><%= @art_piece.price %> € | week </p>
             <p><strong>Status: </strong>
+            <%#If/else for availability  %>
               <% if @art_piece.availability %>
                 <%= 'currently available ' %>
                 <i class="fas fa-check" id="available"></i>

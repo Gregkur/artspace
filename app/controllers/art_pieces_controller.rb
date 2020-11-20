@@ -1,4 +1,7 @@
 class ArtPiecesController < ApplicationController
+  ## Added attr_writer
+  attr_writer :availability
+
   def show
     @art_piece = ArtPiece.find(params[:id])
     @booking = Booking.new
@@ -37,13 +40,12 @@ class ArtPiecesController < ApplicationController
       render :new
     end
 
-
   end
 
   private
 
   def art_piece_params # params for security reasons
-    params.require(:art_piece).permit(:title, :description, :price, :artist, photos: []) # add photos: [] if user can upload a photo too
+    params.require(:art_piece).permit(:title, :description, :price, :artist, :availability, photos: []) # add photos: [] if user can upload a photo too
   end
 
 end
