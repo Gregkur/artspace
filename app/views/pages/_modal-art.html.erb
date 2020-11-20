@@ -1,7 +1,6 @@
  <div class="container justify-content-center my-4">
-  <div class="main-container">
-    <div class="container art-piece-grid">
-      <% @user.art_pieces.each do |art_piece| %>
+  <div class="art-piece-grid">
+    <% @user.art_pieces.each do |art_piece| %>
       <div class="card-art-piece">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -9,39 +8,38 @@
               <div class="carousel-item <%= "active" if i.zero? %>">
                 <%= cl_image_tag photo.key, crop: :fill, class:"img-index" %>
                 <%= link_to "", art_piece_path(art_piece), class: "card-link" %>
-          </div>
-            <% end %>
-        </div>
-      </div>
-      <div class="card-art-piece-infos">
-        <div>
-          <h2><%= art_piece.title %></h2>
-          <p><%= art_piece.artist %>.</p>
-          <div class="functional-buttons">
-            <%= link_to art_piece, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <i class="fas fa-trash mr-2 mt-2"></i>
-            <% end %>
-            <%= link_to art_piece, {:class => 'tooltips', 'data-toggle' => 'modal', 'data-target' => '#exampleModal'+art_piece.id.to_s} do %>
-              <i class="fas fa-edit"></i>
+              </div>
             <% end %>
           </div>
-        <%#= link_to "", art_piece_path(art_piece), class: "card-link img-index" %>
         </div>
-        <h2 class="card-art-piece-pricing">
-          <%= "#{art_piece.price} € | mth" %>
-        </h2>
+        <div class="card-art-piece-infos">
+          <div>
+            <h2><%= art_piece.title %></h2>
+            <p><%= art_piece.artist %>.</p>
+            <div class="functional-buttons">
+              <%= link_to art_piece, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-trash mr-2 mt-2"></i>
+              <% end %>
+              <%= link_to art_piece, {:class => 'tooltips', 'data-toggle' => 'modal', 'data-target' => '#exampleModal'+art_piece.id.to_s} do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
+            </div>
+          </div>
+          <h2 class="card-art-piece-pricing">
+            <%= "#{art_piece.price} € | mth" %>
+          </h2>
+        </div>
       </div>
-    </div>
-    <div class="modal fade" id="exampleModal<%=art_piece.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
+      <div class="modal fade" id="exampleModal<%=art_piece.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Editing <b><%= art_piece.title %></b></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-          </div>
-          <div class="modal-body">
+            </div>
+            <div class="modal-body">
             <%= simple_form_for(art_piece) do |f| %>
               <%= f.error_notification %>
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -52,16 +50,15 @@
                 <%= f.input :description %>
               </div>
               <div class="modal-footer">
-              <div class="form-actions">
-                <%= f.button :submit, class: "btn btn-flat-create" %>
-              </div>
+                <div class="form-actions">
+                  <%= f.button :submit, class: "btn btn-flat-create" %>
+                </div>
               </div>
             <% end %>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-      <% end %>
+    <% end %>
   </div>
 </div>
-

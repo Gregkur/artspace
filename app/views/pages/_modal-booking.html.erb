@@ -1,6 +1,6 @@
-<div class="container d-flex justify-content-center my-4">
-  <div class="container">
-    <div class="container art-piece-grid">
+<div class="container justify-content-center my-4">
+
+    <div class="art-piece-grid">
       <% @user.bookings.each do |booking| %>
         <div class="card-art-piece">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -8,7 +8,7 @@
               <% booking.art_piece.photos.each_with_index do |photo, i| %>
                 <div class="carousel-item <%= "active" if i.zero? %>">
                 <%= cl_image_tag photo.key, crop: :fill, class:"img-index" %>
-                <%= link_to "", art_piece_path, class: "card-link img-index" %>
+                <%= link_to "", art_piece_path, class: "card-link" %>
             </div>
             <% end %>
           </div>
@@ -30,5 +30,5 @@
       </div>
       <% end %>
     </div>
-  </div>
+
 </div>
