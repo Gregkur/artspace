@@ -12,7 +12,6 @@ class BookingsController < ApplicationController
     if @booking.save
       ## Saving the new availability
       @art_piece.save
-      flash[:notice] = "Your artpiece has been added!"
       redirect_to art_piece_path(@art_piece, booking_created: true)
     else
       @booking_created = false
